@@ -1,2 +1,4 @@
 llmsherpa
 langchain-community
+PyPDF2
+nltk
