@@ -2,3 +2,5 @@ llmsherpa
 langchain-community
 PyPDF2
 nltk
+pymilvus
+sentence_transformers

@@ -1,0 +1,46 @@
+{
+    "query": " we      employ      the      Prolog      engine      to      perform logical      reasoning",
+    "timestamp": "2024-07-24T18:30:26.672472",
+    "results": [
+        {
+            "id": "22",
+            "chunk_id": 27,
+            "section_id": 26,
+            "book_id": 2,
+            "content": "In      this      paper,      we      introduce      THOUGHT-LIKE-\nlogical      reasoning      capabilities      of      LLMs      by      imitating the      verified      reasoning      processes      of      the      Prolog      logic engine.",
+            "similarity_score": 0.3988879323005676
+        },
+        {
+            "id": "152",
+            "chunk_id": 163,
+            "section_id": 159,
+            "book_id": 2,
+            "content": "This      was utilized      to      evaluate      the      final      reasoning      accuracy, relying      solely      on      Prolog      engine      inferences,      without the      requirement      for      training      LLMs      or      using      them to      derive      final      answers. All      experiment      results      are      presented      in      Table      1. We      report      the      CARING      results      across      three      reason- ing      tasks.",
+            "similarity_score": 0.4074714183807373
+        },
+        {
+            "id": "38",
+            "chunk_id": 43,
+            "section_id": 26,
+            "book_id": 2,
+            "content": "lx)\nProlog      is   \n \na      high-level      symbolic      language      system This      is      designed      to      guide      the      model      pg      in      generat- designed      for      rule-based      reasoning      (Andreas      et      al., ing      relevant      rules      R,,      facts      F,,      and      deriving      the 2016;      Neelakantan      et      al.,      2017),      fundamentally      op- reasoning      target      Ty:\nerating      within   \n \na      subset      of      predicate      logic      known as      Horn      Clause      logic      (Hudson      and      Manning,      2019; (Re,      Fx,Ty)   \n \n~      po(-   \n \n|      prompt,      x,y).",
+            "similarity_score": 0.42993563413619995
+        },
+        {
+            "id": "48",
+            "chunk_id": 54,
+            "section_id": 45,
+            "book_id": 2,
+            "content": "lx)\nProlog      is   \n \na      high-level      symbolic      language      system This      is      designed      to      guide      the      model      pg      in      generat- designed      for      rule-based      reasoning      (Andreas      et      al., ing      relevant      rules      R,,      facts      F,,      and      deriving      the 2016;      Neelakantan      et      al.,      2017),      fundamentally      op- reasoning      target      Ty:\nerating      within   \n \na      subset      of      predicate      logic      known as      Horn      Clause      logic      (Hudson      and      Manning,      2019; (Re,      Fx,Ty)   \n \n~      po(-   \n \n|      prompt,      x,y).",
+            "similarity_score": 0.42993563413619995
+        },
+        {
+            "id": "23",
+            "chunk_id": 28,
+            "section_id": 26,
+            "book_id": 2,
+            "content": "We      begin      by      utilizing      open-source      chat LLMs,      such      as      Llama3-8B-Instruct      (AI@      Meta, 2024),      to      generate      rules,      facts,      and      queries      follow- ing      specific      instructions      and      demonstrations. Sub- sequently,      we      employ      the      Prolog      engine      to      perform logical      reasoning,      verifying      the      outcomes      against established      truths.",
+            "similarity_score": 0.49339962005615234
+        }
+    ]
+}

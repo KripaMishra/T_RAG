@@ -1,0 +1,46 @@
+{
+    "query": "Few-shot      In-Context      Learning ",
+    "timestamp": "2024-07-24T18:28:31.510603",
+    "results": [
+        {
+            "id": "92",
+            "chunk_id": 99,
+            "section_id": 56,
+            "book_id": 2,
+            "content": "How      abilities      in      large      language      models      are      affected       by      supervised      fine-tuning      data      composition. arXiv       preprint      arXiv:2310.05492. |       Qingxiu      Dong,      Lei      Li,      Damai      Dai,      Ce      Zheng,      Zhiy-       ong      Wu,      Baobao      Chang,      Xu      Sun,      Jingjing      Xu,      and       Zhifang      Sui. 2022. A      survey      on      in-context      learning.",
+            "similarity_score": 1.0687808990478516
+        },
+        {
+            "id": "93",
+            "chunk_id": 100,
+            "section_id": 56,
+            "book_id": 2,
+            "content": "|       arXiv      preprint      arXiv:2301.00234. |       Beliz      Gunel,      Jingfei      Du,      Alexis      Conneau,      and      Ves      Stoy-       anov. 2020. Supervised      contrastive      learning      for      pre-       trained      language      model      fine-tuning. arXiv      preprint       arXiv:2011.01403.",
+            "similarity_score": 1.1519578695297241
+        },
+        {
+            "id": "107",
+            "chunk_id": 114,
+            "section_id": 56,
+            "book_id": 2,
+            "content": "Nvidia      a800. https:      //www.nvidia.com/en-us/geforce/  \n \n  design-visualization/a800/. Accessed:  \n \n  What      Makes      In-Context      Learning      Work. Rethinking  \n \n  the      role      of      demonstrations:      What      makes      in-context  \n \n  learning      work? |       2024-04-30. Takayuki      Osa,      Joni      Pajarinen,      Gerhard      Neumann,      J      An-       drew      Bagnell,      Pieter      Abbeel,      Jan      Peters,      et      al. 2018.",
+            "similarity_score": 1.1572428941726685
+        },
+        {
+            "id": "16",
+            "chunk_id": 20,
+            "section_id": 3,
+            "book_id": 2,
+            "content": "Building      on      the      CoT      frame- work,      other      methodologies      like      Tree-of-Thoughts (Yao      et      al.,      2024;      Long,      2023;      Hulbert,      2023) and      Graph-of-Thoughts      (Besta      et      al.,      2024;      Zhang of      LLMs      through      in-context      learning      (Dong      et      al., 2022;      Work)      and      guide      model      output.",
+            "similarity_score": 1.1643449068069458
+        },
+        {
+            "id": "113",
+            "chunk_id": 120,
+            "section_id": 56,
+            "book_id": 2,
+            "content": "Advances      in      Neural  \n \n  Information      Processing      Systems,      36. Xi      Ye      and      Greg      Durrett. 2022. The      unreliability      of      ex-  \n \n  planations      in      few-shot      prompting      for      textual      reason-  \n \n  ing.",
+            "similarity_score": 1.1949968338012695
+        }
+    ]
+}
