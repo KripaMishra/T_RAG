@@ -91,6 +91,7 @@ def process_files(file_links: List[str]):
 
     for i in range(len(file_links)):
         try:
+            print(f"--------------------------Starting Data processing for item number: {i+1}-------------------------------------")
             print("preparing the loader")
             loader = LLMSherpaFileLoader(
                 file_path=file_links[i],
@@ -128,7 +129,7 @@ def process_files(file_links: List[str]):
     library_structure = convert_to_textbook_structure(all_documents.values(), max_chunk_size=500)
 
     # Save the structure to a JSON file
-    json_file_path = "library_structure.json"
+    json_file_path = "structured_data.json"
     save_structure_to_json(library_structure, json_file_path)
 
     print(f"Library structure saved to {json_file_path}")
@@ -162,4 +163,4 @@ if __name__ == "__main__":
         'https://arxiv.org/pdf/2407.14741',
         'https://arxiv.org/pdf/2407.14765'
     ]
-    process_files(file_links[:5])
+    process_files(file_links)
