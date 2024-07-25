@@ -1,8 +1,13 @@
 import json
 import re
+import logging
 from typing import List, Dict
+from argparse import ArgumentParser
 from langchain_community.document_loaders.llmsherpa import LLMSherpaFileLoader
 from tree_indexer import TreeIndex
+
+# Configure logging
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # ID-Generation--------------------
 
@@ -74,12 +79,21 @@ def convert_to_textbook_structure(books: List[List[Dict]], max_chunk_size: int =
     return library
 
 def save_structure_to_json(structure, file_path):
-    with open(file_path, 'w', encoding='utf-8') as f:
-        json.dump(structure, f, ensure_ascii=False, indent=2)
+    try:
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(structure, f, ensure_ascii=False, indent=2)
+        logging.info(f"Structure saved to {file_path}")
+    except Exception as e:
+        logging.error(f"Error saving structure to JSON: {e}")
 
 def load_structure_from_json(file_path):
-    with open(file_path, 'r', encoding='utf-8') as f:
-        return json.load(f)
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            logging.info(f"Loading structure from {file_path}")
+            return json.load(f)
+    except Exception as e:
+        logging.error(f"Error loading structure from JSON: {e}")
+        return None
 
 def print_structure(node, indent=0):
     print("  " * indent + f"[ID: {node['id']}] {node['type']}: {node['title']}")
@@ -89,81 +103,53 @@ def print_structure(node, indent=0):
         print_structure(child, indent + 1)
 
 def process_files(file_links: List[str]):
-    # Dictionary to store lists of dictionaries for each document
     all_documents = {}
 
-    for i in range(len(file_links)):
+    for i, file_link in enumerate(file_links):
         try:
-            print(f"--------------------------Starting Data processing for item number: {i+1}-------------------------------------")
-            print("preparing the loader")
+            logging.info(f"Starting data processing for file: {file_link}")
             loader = LLMSherpaFileLoader(
-                file_path=file_links[i],
+                file_path=file_link,
                 new_indent_parser=True,
                 apply_ocr=True,
                 strategy="sections",
                 llmsherpa_api_url="http://localhost:5010/api/parseDocument?renderFormat=all"
             )
-            
-            print("loading the data")
+            logging.info("Loading data...")
             test_data = loader.load()
-            print("loaded the data")
+            logging.info("Data loaded.")
 
-            # List of Document objects
-            section_documents = test_data
-
-            # Convert to list of dictionaries
             section_documents_dicts = []
-            print("converting into dictionaries")
-            for doc in section_documents:
+            for doc in test_data:
                 doc_dict = {
                     'metadata': doc.metadata,
                     'page_content': doc.page_content
                 }
                 section_documents_dicts.append(doc_dict)
 
-            # Store the list of dictionaries in the main dictionary
             all_documents[f"document_{i+1}"] = section_documents_dicts
         except KeyError as e:
-            print(f"Error processing {file_links[i]}: {e}")
+            logging.error(f"KeyError processing {file_link}: {e}")
         except Exception as e:
-            print(f"An unexpected error occurred while processing {file_links[i]}: {e}")
+            logging.error(f"Unexpected error processing {file_link}: {e}")
 
-    # Convert to library structure
     library_structure = convert_to_textbook_structure(all_documents.values(), max_chunk_size=500)
-
-    # Save the structure to a JSON file
     json_file_path = "library_structure.json"
     save_structure_to_json(library_structure, json_file_path)
+    logging.info(f"Library structure saved to {json_file_path}")
 
-    print(f"Library structure saved to {json_file_path}")
-
-    # Build the tree index
     tree_index = TreeIndex()
     tree_index.build_from_json(library_structure)
 
     return tree_index
 
 if __name__ == "__main__":
-    file_links = [
-        'https://arxiv.org/pdf/2407.14562',
-        'https://arxiv.org/pdf/2407.14743',
-        'https://arxiv.org/pdf/2407.14662',
-        'https://arxiv.org/pdf/2407.15259',
-        'https://arxiv.org/pdf/2407.15527',
-        'https://arxiv.org/pdf/2407.12873',
-        'https://arxiv.org/pdf/2407.14525',
-        'https://arxiv.org/pdf/2407.14565',
-        'https://arxiv.org/pdf/2407.14568',
-        'https://arxiv.org/pdf/2407.14622',
-        'https://arxiv.org/pdf/2407.14631',
-        'https://arxiv.org/pdf/2407.14651',
-        'https://arxiv.org/pdf/2407.14658',
-        'https://arxiv.org/pdf/2407.14681',
-        'https://arxiv.org/pdf/2407.14717',
-        'https://arxiv.org/pdf/2407.14725',
-        'https://arxiv.org/pdf/2407.14735',
-        'https://arxiv.org/pdf/2407.14738',
-        'https://arxiv.org/pdf/2407.14741',
-        'https://arxiv.org/pdf/2407.14765'
-    ]
-    # process_files(file_links)
+    parser = ArgumentParser(description="Process PDF files and build a tree structure for indexing.")
+    parser.add_argument("--file-links", type=str, nargs="+", required=True, help="List of file links to process.")
+
+    args = parser.parse_args()
+
+    tree_index = process_files(args.file_links)
+    logging.info("Processing complete.")
+
+# python components/data_prep.py --file-links "https://arxiv.org/pdf/2407.14562" "https://arxiv.org/pdf/2407.14743"
