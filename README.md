@@ -1,6 +1,3 @@
-Here's the entire README.md content in a single code block:
-
-
 # T_RAG Setup Guide
 
 This guide will walk you through setting up the T_RAG system, including data scraping, database setup, and query processing. The system uses Milvus for vector search, Elasticsearch for BM25, and `nlm-ingestor` for document layout and PDF parsing.
