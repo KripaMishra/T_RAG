@@ -120,5 +120,5 @@ file_links = [
     'https://arxiv.org/pdf/2407.14741',
     'https://arxiv.org/pdf/2407.14765'
 ]
-tree_index = process_files(file_links[:1])
+tree_index = process_files(file_links)
 ingest_data(tree_index)
