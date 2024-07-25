@@ -17,25 +17,8 @@ pip install -r requirements.txt
 
 Ensure that all dependencies are properly installed before proceeding to the next steps.
 
-## Step 1: Data Scraping from NVIDIA Documentation
 
-We will scrape data from the NVIDIA CUDA documentation for processing and indexing.
-
-1. Navigate to the directory containing the Scrapy spider:
-
-    ```bash
-    cd /home/ubuntu/Steps/nvidia_docs/nvidia_docs/spiders/
-    ```
-
-2. Run the spider to crawl data and save the output to a JSON file:
-
-    ```bash
-    scrapy runspider nvidia_docs -o output.json
-    ```
-
-   **Note**: The spider name should be specified within the spider file. The `output.json` file will contain the crawled data. By default, the spider crawls up to `depth=1` for resource efficiency, but this can be changed to a deeper level in the `settings.py` file.
-
-## Step 2: Setting up Milvus and Elasticsearch
+## Setting up Milvus and Elasticsearch
 
 **Note**: While Elasticsearch isn't required immediately, it's recommended to set up all components simultaneously for a hybrid indexing approach.
 
