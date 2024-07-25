@@ -30,7 +30,7 @@ def normalize_scores(scores: List[float]) -> List[float]:
         return [1.0] * len(scores)  # Prevent division by zero if all scores are the same
     return [(score - min_score) / (max_score - min_score) for score in scores]
 
-def hybrid_search(query: str, top_k: int = 5) -> List[dict]:
+def hybrid_search(query: str, top_k: int = 2) -> List[dict]:
     """Perform a hybrid search using Milvus and Elasticsearch."""
     try:
         # Vector similarity search in Milvus

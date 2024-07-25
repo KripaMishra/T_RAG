@@ -1,0 +1,52 @@
+{
+    "timestamp": "2024-07-25T16:45:00.152971",
+    "original_query": "what are the major obstacles for output generation on semantic level ?",
+    "answer": "To answer the query about the major hurdles for the output generation of semantic level, we first define the following hurdles:\nThe main hurdle for the generation of accurate results is the lack of efficient and accurate way of processing large corpus. However, this problem can be overcome by using symbolic processing engines, such as ProLog, which can process large corpus of documents with high efficiency.\nThe second hurdle is the problem of verifying the correctness of the logic. The problem of verifi- cation can be solved using standard tools, such the Boolean logic and Prolog.\nFinally, the third hurdle is that of proving the validity of the inference engine. The verification can be done using the standard tools Prolog and Boolean logic.\nIn the process of solving the above-mentioned hurdles, we find the following solutions:\n1. Use a symbolic engine.\n2. Use the Standard tools ProLog and Boolean Logic to verify the correctness and efficiency of the engine. This solution is the most efficient",
+    "retrieved_documents": [
+        {
+            "id": "88",
+            "chunk_id": 95,
+            "section_id": 56,
+            "book_id": 2,
+            "content": "|       Mark      Chen,      Jerry      Tworek,      Heewoo      Jun,      Qiming       Yuan,      Henrique      Ponde      de      Oliveira      Pinto,      Jared      Ka-       plan,      Harri      Edwards,      Yuri      Burda,      Nicholas      Joseph,       Greg      Brockman,      et      al. 2021. Evaluating      large       language      models      trained      on      code. arXiv      preprint       arXiv:2107.03374.",
+            "similarity_score": 1.0,
+            "source": "milvus"
+        },
+        {
+            "id": "9",
+            "chunk_id": 13,
+            "section_id": 3,
+            "book_id": 2,
+            "content": "At the      semantic      level,      the      generation      of      accurate      multi- hop      inferential      pathways      and      the      assurance      of      va- lidity      at      each      reasoning      step      remain      significant      ob- stacles      (Creswell      et      al.,      2023;      Kazemi      et      al.,      2023).",
+            "similarity_score": 1.0,
+            "source": "elasticsearch"
+        },
+        {
+            "id": "20",
+            "chunk_id": 24,
+            "section_id": 3,
+            "book_id": 2,
+            "content": "One      particularly      effective      method      in- volves      the      use      of      symbolic      logic      engines,      such      as Prolog      (Bowen,      1979),      to      conduct      symbolic      infer- ence,      thereby      ensuring      the      correctness      of      the      rea- soning      trajectory.",
+            "similarity_score": 0.9683891175740472,
+            "source": "milvus"
+        },
+        {
+            "id": "159",
+            "chunk_id": 170,
+            "section_id": 159,
+            "book_id": 2,
+            "content": "The      experimental      results      for      reasoning      tasks      also suggest      that      imitating      strictly      logical      reasoning      tra- jectories      can      significantly      enhance      performance      in logical      reasoning      tasks,      such      as      ProofWriter      and These      findings      not      only      confirm      the      efficacy      of imitating      strictly      correct      logical      reasoning      trajecto- ries      in      aligning      the      reasoning      capabilities      of      LLMs, but      also      suggest      that      LLMs      may      be      better      suited to      modeling      natural      language      problems      using      the relatively      straightforward      Prolog      language,      rather than      translating      these      problems      into      more      complex mainstream      programming      languages      like      Python.",
+            "similarity_score": 0.8494870831033874,
+            "source": "milvus"
+        },
+        {
+            "id": "105",
+            "chunk_id": 112,
+            "section_id": 56,
+            "book_id": 2,
+            "content": "2022. Chain-of-thought      prompting      elicits      rea-  \n \n  soning      in      large      language      models. Advances      in      neural  \n \n  information      processing      systems,      35:24824—24837. |       Arvind      Neelakantan,      Quoc      V. Le,      Martin      Abadi,      An-       drew      McCallum,      and      Dario      Amodei. 2017. Learning       a      natural      language      interface      with      neural      programmer.",
+            "similarity_score": 0.4729782973508028,
+            "source": "milvus"
+        }
+    ]
+}

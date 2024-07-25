@@ -1,0 +1,25 @@
+{
+    "timestamp": "2024-07-25T18:50:00.575171",
+    "original_query": "what are thought like logical      reasoning      capabilities  ?",
+    "retrieved_documents": [
+        {
+            "id": "140",
+            "chunk_id": 150,
+            "section_id": 134,
+            "book_id": 2,
+            "content": "We      randomly selected      100      statement-context      pairs      to      generate reasoning      trajectories      and      employed      the      remain- ing      data      for      assessing      the      THOUGHT-LIKE-PRO framework’s      capabilities. The      maximum      number of      reasoning      trajectories      per      question      was      set      to      5.",
+            "similarity_score": 1.0,
+            "source": "milvus"
+        },
+        {
+            "id": "22",
+            "chunk_id": 27,
+            "section_id": 26,
+            "book_id": 2,
+            "content": "In      this      paper,      we      introduce      THOUGHT-LIKE-\nlogical      reasoning      capabilities      of      LLMs      by      imitating the      verified      reasoning      processes      of      the      Prolog      logic engine.",
+            "similarity_score": 1.0,
+            "source": "elasticsearch"
+        }
+    ],
+    "answer": "Thought-like logical reasoning capabilities refer to the ability of reasoning agents to construct logical inferences from given information and reason about potential consequences. It involves the ability to identify patterns, draw inferences, and reason about the logical implications of propositions."
+}

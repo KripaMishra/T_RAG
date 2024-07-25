@@ -1,0 +1,25 @@
+{
+    "timestamp": "2024-07-25T18:44:03.954605",
+    "original_query": " what logic engines are required for symbolic inference?",
+    "retrieved_documents": [
+        {
+            "id": "38",
+            "chunk_id": 43,
+            "section_id": 26,
+            "book_id": 2,
+            "content": "lx)\nProlog      is   \n \na      high-level      symbolic      language      system This      is      designed      to      guide      the      model      pg      in      generat- designed      for      rule-based      reasoning      (Andreas      et      al., ing      relevant      rules      R,,      facts      F,,      and      deriving      the 2016;      Neelakantan      et      al.,      2017),      fundamentally      op- reasoning      target      Ty:\nerating      within   \n \na      subset      of      predicate      logic      known as      Horn      Clause      logic      (Hudson      and      Manning,      2019; (Re,      Fx,Ty)   \n \n~      po(-   \n \n|      prompt,      x,y).",
+            "similarity_score": 1.0,
+            "source": "milvus"
+        },
+        {
+            "id": "20",
+            "chunk_id": 24,
+            "section_id": 3,
+            "book_id": 2,
+            "content": "One      particularly      effective      method      in- volves      the      use      of      symbolic      logic      engines,      such      as Prolog      (Bowen,      1979),      to      conduct      symbolic      infer- ence,      thereby      ensuring      the      correctness      of      the      rea- soning      trajectory.",
+            "similarity_score": 1.0,
+            "source": "elasticsearch"
+        }
+    ],
+    "answer": "Symbolic inference requires logic engines that can handle symbolic expressions and perform inferences based on those expressions. Prolog is a commonly used symbolic language and system for symbolic inference."
+}

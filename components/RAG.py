@@ -51,12 +51,12 @@ class RAGModel:
             # Ensure the prompt fits within the model's maximum length
             encoded_prompt = self.tokenizer.encode(prompt, return_tensors="pt")
             max_length = min(self.max_length, 1024)  # Use the smaller of model's max length or 1024
-            if encoded_prompt.size(1) > max_length - 100:  # Reserve 100 tokens for the answer
-                encoded_prompt = encoded_prompt[:, :max_length - 100]
+            if encoded_prompt.size(1) > max_length - 200:  # Reserve 100 tokens for the answer
+                encoded_prompt = encoded_prompt[:, :max_length - 200]
                 prompt = self.tokenizer.decode(encoded_prompt[0], skip_special_tokens=True)
 
             logging.info("Generating answer...")
-            response = self.generator(prompt, max_new_tokens=100, num_return_sequences=1, temperature=0.3, top_k=50, top_p=0.95, do_sample=True)
+            response = self.generator(prompt, max_new_tokens=200, num_return_sequences=1, temperature=0.5, top_k=50, top_p=0.95, do_sample=True)
             
             answer = response[0]['generated_text'][len(prompt):].strip()
             logging.info("Answer generated successfully")
@@ -107,7 +107,7 @@ class RAGModel:
 def main(query, file_path):
     try:
         logging.info("Starting main function")
-        model_name = "google/gemma-2-9b"  # Replace with your preferred model
+        model_name = "google/gemma-1.1-2b-it"  # Replace with your preferred model
         logging.info(f"Initializing RAGModel with model: {model_name}")
         rag_model = RAGModel(model_name)
         

@@ -1,0 +1,52 @@
+{
+    "timestamp": "2024-07-25T18:42:20.969705",
+    "original_query": " what logic engines are required for symbolic inference?",
+    "retrieved_documents": [
+        {
+            "id": "22",
+            "chunk_id": 27,
+            "section_id": 26,
+            "book_id": 2,
+            "content": "In      this      paper,      we      introduce      THOUGHT-LIKE-\nlogical      reasoning      capabilities      of      LLMs      by      imitating the      verified      reasoning      processes      of      the      Prolog      logic engine.",
+            "similarity_score": 1.0,
+            "source": "milvus"
+        },
+        {
+            "id": "20",
+            "chunk_id": 24,
+            "section_id": 3,
+            "book_id": 2,
+            "content": "One      particularly      effective      method      in- volves      the      use      of      symbolic      logic      engines,      such      as Prolog      (Bowen,      1979),      to      conduct      symbolic      infer- ence,      thereby      ensuring      the      correctness      of      the      rea- soning      trajectory.",
+            "similarity_score": 1.0,
+            "source": "elasticsearch"
+        },
+        {
+            "id": "110",
+            "chunk_id": 117,
+            "section_id": 56,
+            "book_id": 2,
+            "content": "Logic-lm:      Em-       powering      large      language      models      with      symbolic       solvers      for      faithful      logical      reasoning. Preprint,       arXiv:2305.12295. | Liangming      Pan,      Alon      Albalak,      Xinyi      Wang,      and  \n \n  William      Yang      Wang. 2023a. Logic-lm:      Em-  \n \n  powering      large      language      models      with      symbolic  \n \n  solvers      for      faithful      logical      reasoning.",
+            "similarity_score": 0.9595005408873265,
+            "source": "milvus"
+        },
+        {
+            "id": "48",
+            "chunk_id": 54,
+            "section_id": 45,
+            "book_id": 2,
+            "content": "lx)\nProlog      is   \n \na      high-level      symbolic      language      system This      is      designed      to      guide      the      model      pg      in      generat- designed      for      rule-based      reasoning      (Andreas      et      al., ing      relevant      rules      R,,      facts      F,,      and      deriving      the 2016;      Neelakantan      et      al.,      2017),      fundamentally      op- reasoning      target      Ty:\nerating      within   \n \na      subset      of      predicate      logic      known as      Horn      Clause      logic      (Hudson      and      Manning,      2019; (Re,      Fx,Ty)   \n \n~      po(-   \n \n|      prompt,      x,y).",
+            "similarity_score": 0.9589198648119107,
+            "source": "milvus"
+        },
+        {
+            "id": "38",
+            "chunk_id": 43,
+            "section_id": 26,
+            "book_id": 2,
+            "content": "lx)\nProlog      is   \n \na      high-level      symbolic      language      system This      is      designed      to      guide      the      model      pg      in      generat- designed      for      rule-based      reasoning      (Andreas      et      al., ing      relevant      rules      R,,      facts      F,,      and      deriving      the 2016;      Neelakantan      et      al.,      2017),      fundamentally      op- reasoning      target      Ty:\nerating      within   \n \na      subset      of      predicate      logic      known as      Horn      Clause      logic      (Hudson      and      Manning,      2019; (Re,      Fx,Ty)   \n \n~      po(-   \n \n|      prompt,      x,y).",
+            "similarity_score": 0.9589198648119107,
+            "source": "milvus"
+        }
+    ],
+    "answer": "Symbolic inference requires logic engines that can handle symbolic representations and perform logical reasoning. Prolog is a particularly effective symbolic language system for this purpose."
+}
