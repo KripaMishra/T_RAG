@@ -106,7 +106,7 @@ def normalize_scores(scores):
 def hybrid_search(query: str, top_k: int = 5):
     # Vector similarity search in Milvus
     query_vector = embedding_model.encode(query).tolist()
-    search_params = {"metric_type": "L2", "params": {"nprobe": 10}}
+    search_params = {"metric_type": "COSINE", "params": {"nprobe": 10}}
     milvus_results = chunks_collection.search(
         data=[query_vector],
         anns_field="embedding",
@@ -198,21 +198,22 @@ def save_results_to_json(query: str, results: list):
     
     print(f"Results saved to {filename}")
 
-# Example usage
-query = "we employ the Prolog engine to perform logical reasoning"
-results = hybrid_search(query)
+if __name__=="__main__":
+    # Example usage
+    query = "we employ the Prolog engine to perform logical reasoning"
+    results = hybrid_search(query)
 
-# Save results to JSON file
-save_results_to_json(query, results)
+    # Save results to JSON file
+    save_results_to_json(query, results)
 
-# Print results to console
-for result in results:
-    print(f"ID: {result['id']}")
-    print(f"Chunk ID: {result['chunk_id']}")
-    print(f"Book ID: {result['book_id']}")
-    print(f"Section ID: {result['section_id']}")
-    print(f"Content: {result['content'][:100]}...")
-    print(f"Score: {result['similarity_score']}")
-    print(f"Source: {result['source']}")
-    print("---")
+    # Print results to console
+    for result in results:
+        print(f"ID: {result['id']}")
+        print(f"Chunk ID: {result['chunk_id']}")
+        print(f"Book ID: {result['book_id']}")
+        print(f"Section ID: {result['section_id']}")
+        print(f"Content: {result['content'][:100]}...")
+        print(f"Score: {result['similarity_score']}")
+        print(f"Source: {result['source']}")
+        print("---")
 

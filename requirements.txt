@@ -5,3 +5,4 @@ nltk
 pymilvus
 sentence_transformers
 elasticsearch
+torch

@@ -1,0 +1,51 @@
+{
+    "query": "we employ the Prolog engine to perform logical reasoning",
+    "timestamp": "2024-07-25T12:31:05.771507",
+    "results": [
+        {
+            "id": "23",
+            "chunk_id": 28,
+            "section_id": 26,
+            "book_id": 2,
+            "content": "We      begin      by      utilizing      open-source      chat LLMs,      such      as      Llama3-8B-Instruct      (AI@      Meta, 2024),      to      generate      rules,      facts,      and      queries      follow- ing      specific      instructions      and      demonstrations. Sub- sequently,      we      employ      the      Prolog      engine      to      perform logical      reasoning,      verifying      the      outcomes      against established      truths.",
+            "similarity_score": 1.0,
+            "source": "milvus"
+        },
+        {
+            "id": "23",
+            "chunk_id": 28,
+            "section_id": 26,
+            "book_id": 2,
+            "content": "We      begin      by      utilizing      open-source      chat LLMs,      such      as      Llama3-8B-Instruct      (AI@      Meta, 2024),      to      generate      rules,      facts,      and      queries      follow- ing      specific      instructions      and      demonstrations. Sub- sequently,      we      employ      the      Prolog      engine      to      perform logical      reasoning,      verifying      the      outcomes      against established      truths.",
+            "similarity_score": 1.0,
+            "source": "elasticsearch"
+        },
+        {
+            "id": "61",
+            "chunk_id": 68,
+            "section_id": 56,
+            "book_id": 2,
+            "content": "|       min      E(x,      cP°¢,y)~Darr      [log      po(y,c””°|x)],      (6)\n | To      employ      the      Prolog      engine      Prolog      for      logical reasoning,      we      initiate      the      process      by      constructing resulting      in      a      trained      model      parameterized      by      6’. | This      entire      learning      process      parallels      imitation       Acc a      few-shot      demonstration      prompt,.-,      (Listing      1).",
+            "similarity_score": 0.43393607689946867,
+            "source": "elasticsearch"
+        },
+        {
+            "id": "48",
+            "chunk_id": 54,
+            "section_id": 45,
+            "book_id": 2,
+            "content": "lx)\nProlog      is   \n \na      high-level      symbolic      language      system This      is      designed      to      guide      the      model      pg      in      generat- designed      for      rule-based      reasoning      (Andreas      et      al., ing      relevant      rules      R,,      facts      F,,      and      deriving      the 2016;      Neelakantan      et      al.,      2017),      fundamentally      op- reasoning      target      Ty:\nerating      within   \n \na      subset      of      predicate      logic      known as      Horn      Clause      logic      (Hudson      and      Manning,      2019; (Re,      Fx,Ty)   \n \n~      po(-   \n \n|      prompt,      x,y).",
+            "similarity_score": 0.3226669215539084,
+            "source": "milvus"
+        },
+        {
+            "id": "38",
+            "chunk_id": 43,
+            "section_id": 26,
+            "book_id": 2,
+            "content": "lx)\nProlog      is   \n \na      high-level      symbolic      language      system This      is      designed      to      guide      the      model      pg      in      generat- designed      for      rule-based      reasoning      (Andreas      et      al., ing      relevant      rules      R,,      facts      F,,      and      deriving      the 2016;      Neelakantan      et      al.,      2017),      fundamentally      op- reasoning      target      Ty:\nerating      within   \n \na      subset      of      predicate      logic      known as      Horn      Clause      logic      (Hudson      and      Manning,      2019; (Re,      Fx,Ty)   \n \n~      po(-   \n \n|      prompt,      x,y).",
+            "similarity_score": 0.3226669215539084,
+            "source": "milvus"
+        }
+    ]
+}
