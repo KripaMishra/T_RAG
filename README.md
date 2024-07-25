@@ -10,8 +10,8 @@ This guide will walk you through setting up the T_RAG system, including data scr
 First, clone the repository and install the required Python packages.
 
 ```bash
-git clone <your-repo-url>
-cd <your-repo-directory>
+git clone https://github.com/KripaMishra/T_RAG.git
+cd T_RAG/
 pip install -r requirements.txt
 ```
 
@@ -111,5 +111,5 @@ python components/RAG.py "what are the major obstacles for output generation on 
 ```
 
 Ensure that all services (Milvus, Elasticsearch, and `nlm-ingestor`) are running before executing these commands.
-```
+
 
