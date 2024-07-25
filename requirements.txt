@@ -4,3 +4,4 @@ PyPDF2
 nltk
 pymilvus
 sentence_transformers
+elasticsearch
